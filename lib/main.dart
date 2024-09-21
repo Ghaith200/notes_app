@@ -1,34 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/Views/Notes_view.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Notes App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Notes App'),
-        ),
-        body: InteractiveViewer(
-          panEnabled: true,
-          child: Container(
-            color: Colors.red,
-            child: Text("Notes App",
-                style: Theme.of(context).textTheme.headlineMedium),
-          ),
-        ),
-      ),
+      theme: ThemeData.dark(),
+      home: const NotesView(),
     );
   }
 }
