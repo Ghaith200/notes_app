@@ -18,9 +18,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQuery.of
     return MultiBlocProvider(
-      
       providers: [
         BlocProvider(create: (context) => AddNoteCubit()),
       ],
